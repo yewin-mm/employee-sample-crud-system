@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "ca71078e-3397-4b70-af03-99a72fa2ca62",
+		"name": "employee-crud-sample-postman-request",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/employeeCRUD/getAllEmployee",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employeeCRUD",
+						"getAllEmployee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/employeeCRUD/insertEmployee?empName=Ye Win&empAddress=Yangon&priPhone=0966666668&secPhone=0978776666&empEmail=yewin.mmr@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employeeCRUD",
+						"insertEmployee"
+					],
+					"query": [
+						{
+							"key": "empName",
+							"value": "Ye Win"
+						},
+						{
+							"key": "empAddress",
+							"value": "Yangon"
+						},
+						{
+							"key": "priPhone",
+							"value": "0966666668"
+						},
+						{
+							"key": "secPhone",
+							"value": "0978776666"
+						},
+						{
+							"key": "empEmail",
+							"value": "yewin.mmr@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/employeeCRUD/findEmployeeById/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employeeCRUD",
+						"findEmployeeById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find by empId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/employeeCRUD/findEmployeeByEmpId/EMP_10001",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employeeCRUD",
+						"findEmployeeByEmpId",
+						"EMP_10001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find by employee name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/employeeCRUD/findEmployeeByName/Ye Win",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employeeCRUD",
+						"findEmployeeByName",
+						"Ye Win"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"empId\": \"EMP_10001\",\n    \"empName\": \"Ye Win - Myanmar\",\n    \"empAddress\": \"Mandalay\",\n    \"priPhone\": \"0966663339\",\n    \"secPhone\": \"0978776623\",\n    \"email\": \"yewin.mmr@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/employeeCRUD/updateEmployee",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employeeCRUD",
+						"updateEmployee"
+					]
+				},
+				"description": "here you can add only one or two fields or all fields which you want to update."
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/employeeCRUD/logIn?userName=EMP_10001&password=employee",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employeeCRUD",
+						"logIn"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "EMP_10001"
+						},
+						{
+							"key": "password",
+							"value": "employee"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/employeeCRUD/changePassword?userName=EMP_10001&oldPassword=employee&newPassword=ye123@win&confirmNewPassword=ye123@win",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employeeCRUD",
+						"changePassword"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "EMP_10001"
+						},
+						{
+							"key": "oldPassword",
+							"value": "employee"
+						},
+						{
+							"key": "newPassword",
+							"value": "ye123@win"
+						},
+						{
+							"key": "confirmNewPassword",
+							"value": "ye123@win"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find all role",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/employeeCRUD/findAllRole",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employeeCRUD",
+						"findAllRole"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/employeeCRUD/changeRole?roleId=1&userName=EMP_10001",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employeeCRUD",
+						"changeRole"
+					],
+					"query": [
+						{
+							"key": "roleId",
+							"value": "1"
+						},
+						{
+							"key": "userName",
+							"value": "EMP_10001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete by empId",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/employeeCRUD/deleteByEmpId?empId=EMP_10001",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employeeCRUD",
+						"deleteByEmpId"
+					],
+					"query": [
+						{
+							"key": "empId",
+							"value": "EMP_10001"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
