@@ -82,7 +82,7 @@ Prerequisites can be found in here [Spring Boot Application Instruction](https:/
 ### Instruction
 * Change your database username and password in `application.properties`.
 * Run the project in your IDE. Please make sure application was successfully running.
-* You can check in your database is that there has 'Role and User' table were auto created or not under postgres schema by database GUI tools like ***DBeaver***.
+* You can check in your database is that there has 'Role and User' table were auto created or not, under postgres schema by database GUI tools like ***DBeaver***.
 * Insert some data into 'Role' table in your database by querying in database console.
 * Find 'Role' table under postgres schema which will auto create by running application. 
 * If you can't find, just click refresh and see again under postgres schema.
