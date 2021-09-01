@@ -49,12 +49,12 @@
 - [Contributing](#Contributing)
 
 
-## ⚡️About The Project
+## ⚡️ About The Project
 This is the sample backend microservice project for Employee Management System which developed with Spring Boot + Spring Data JPA + PostgreSQL.
 You can learn Spring boot CRUD with sample employee management system.
 
 
-### Built With  🪓
+### 🪓 Built With
 This project is built with
 * [Java](https://www.oracle.com/au/java/technologies/javase/javase-jdk8-downloads.html)
 * [Maven](https://maven.apache.org/download.cgi)
@@ -77,7 +77,7 @@ Click below links.
 If you already knew above links and you have good enough basic knowledge with Java Spring Boot, you can keep learn this project and see the "Instruction" below.
 
 
-### Clone Project
+### 🥡 Clone Project
 * Clone the repo
    ```sh
    git clone https://github.com/yewin-mm/employee-sample-crud-system.git
