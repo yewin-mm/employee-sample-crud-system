@@ -50,7 +50,7 @@
 
 
 ## ⚡️ About The Project
-This is the sample backend microservice project for Employee Management System by developed with Spring Boot + Spring Data JPA + PostgreSQL.
+This is the sample backend microservice project for Employee Management System which developed with Spring Boot + Spring Data JPA + PostgreSQL.
 You can learn Spring boot CRUD with sample employee management system.
 
 
