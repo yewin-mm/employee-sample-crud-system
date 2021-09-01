@@ -140,7 +140,7 @@ The goal of this system is to manage employee for a company and it will easy to 
 * Generating Unique Employee ID 
 * Inserting, Deleting, updating new employee  
 * Viewing employee created date (which will be employee join date) 
-* Allowing to see all employee information in this company
+* Allowing to see all employees information in this company
 
 ***Have Fun and Enjoy in Learning Code***
 
