@@ -77,7 +77,7 @@ Click below links.
 If you already knew above links and you have good enough basic knowledge with Java Spring Boot, you can keep learn this project and see the "Instruction" below.
 
 
-### 🥡 Clone Project
+### Clone Project
 * Clone the repo
    ```sh
    git clone https://github.com/yewin-mm/employee-sample-crud-system.git
