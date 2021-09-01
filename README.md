@@ -49,12 +49,12 @@
 - [Contributing](#Contributing)
 
 
-## ⚡️ About The Project
+## ⚡️About The Project
 This is the sample backend microservice project for Employee Management System which developed with Spring Boot + Spring Data JPA + PostgreSQL.
 You can learn Spring boot CRUD with sample employee management system.
 
 
-### 🪓 Built With
+### Built With  🪓
 This project is built with
 * [Java](https://www.oracle.com/au/java/technologies/javase/javase-jdk8-downloads.html)
 * [Maven](https://maven.apache.org/download.cgi)
