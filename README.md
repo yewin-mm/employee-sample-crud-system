@@ -46,7 +46,8 @@
 - [Business Logic](#business-logic)
 - [System Goal](#system-goal)
 - [Contact Me](#contact)
-- [Contributing](#Contributing)
+- [Contributing](#contributing)
+
 
 <a name="about-the-project"></a>
 ## ⚡️ About The Project
@@ -54,6 +55,7 @@ This is the sample backend microservice project for Employee Management System w
 You can learn Spring boot CRUD with sample employee management system.
 
 
+<a name="built-with"></a>
 ### 🪓 Built With
 This project is built with
 * [Java](https://www.oracle.com/au/java/technologies/javase/javase-jdk8-downloads.html)
@@ -61,10 +63,13 @@ This project is built with
 * [Postgresql Database](https://www.postgresql.org/download/)
 
 
+<a name="getting-started"></a>
 ## 🔥 Getting Started
 This project is built with java, maven, postgresql and use `Project Lombok` as plugin.
 So, please make sure all are installed in you machine.
 
+
+<a name="before-you-begin"></a>
 ### 🔔 Before you begin
 If you are new in Git, Github and new in Spring Boot configuration structure, <br>
 You should see basic detail instructions first in here
@@ -77,15 +82,19 @@ Click below links.
 If you already knew above links and you have good enough basic knowledge with Java Spring Boot, you can keep learn this project and see the "Instruction" below.
 
 
+<a name="clone-project"></a>
 ### 🥡 Clone Project
 * Clone the repo
    ```sh
    git clone https://github.com/yewin-mm/employee-sample-crud-system.git
-  
+   
+   
+<a name="prerequisites"></a>
 ### 🔑 Prerequisites
 Prerequisites can be found in here [Spring Boot Application Instruction](https://github.com/yewin-mm/spring-boot-app-instruction).
 
 
+<a name="instruction"></a>
 ### 📝 Instruction
 * Change your database username and password in `application.properties`.
 * Run the project in your IDE. Please make sure application was successfully running.
@@ -108,6 +117,8 @@ Prerequisites can be found in here [Spring Boot Application Instruction](https:/
     
 * After that you can see the code and check the code which you don't know. You can learn it and you can apply in your job or study fields.
 
+
+<a name="business-logic"></a>
 ## 💡 Business Logic
 * Imagine that there has one User call System Admin with admin role. (you can manually add new user into users table by insert query)
 * There can be many role as per your requirement and now I set with two roles.
@@ -135,6 +146,8 @@ Prerequisites can be found in here [Spring Boot Application Instruction](https:/
 * So, New Employee can login into this system by his employee id (which is give by HR Manager) and default password, after that he can change password (Assume, Frontend UI has change password page and call changePassword api from that page).
 * After that, new employee can view all employees of this company.
 
+
+<a name="system-goal"></a>
 ## 🎉 System Goal
 The goal of this system is to manage employee for a company and it will easy to manage employee information and will help to HR department in a company like 
 * Generating Unique Employee ID 
@@ -144,12 +157,15 @@ The goal of this system is to manage employee for a company and it will easy to 
 
 ***Have Fun and Enjoy in Learning Code***
 
+
+<a name="contact"></a>
 ## ✉️ Contact
 Name - Ye Win <br> LinkedIn profile -  [Ye Win's LinkedIn](https://www.linkedin.com/in/ye-win-1a33a292/)  <br> Email Address - yewin.mmr@gmail.com
 
 Project Link: [Spring Boot Employee Sample CRUD System](https://github.com/yewin-mm/employee-sample-crud-system)
 
 
+<a name="contributing"></a>
 ## ⭐ Contributing
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 <br>If you want to contribute....
