@@ -151,9 +151,9 @@ Prerequisites can be found in here [Spring Boot Application Instruction](https:/
 ## 🎉 System Goal
 The goal of this system is to manage employee for a company and it will easy to manage employee information and will help to HR department in a company like 
 * Generating Unique Employee ID 
-* Inserting, Deleting, updating new employee  
+* Inserting, Deleting, updating new employee information
 * Viewing employee created date (which will be employee join date) 
-* Allowing to see all employees information in this company
+* Allowing to see all employees information in company
 
 ***Have Fun and Enjoy in Learning Code***
 
