@@ -222,7 +222,7 @@ public class EmployeeService {
 
         if (requestEmployee != null) {
 
-            // check for request employee id null or empty.
+            // check for request employee id null or empty. and this field is important to get existing value from db as per empId
             if (requestEmployee.getEmpId() == null || requestEmployee.getEmpId().trim().equals("")) {
                 return new ResponseEntity("input employee id is null or empty", HttpStatus.NOT_FOUND);
             }
@@ -240,14 +240,14 @@ public class EmployeeService {
                 // now, list can only have one value and we can get by get(0).
                 Employee dbResponseEmployee = dbResponseEmployeeList.get(0);
 
-                int count = 0; // for counting at least one record is change or not.
+                int count = 0; // for counting at least one record is change or not. here, we can do with boolean datatype too.
 
                 /**
-                 * Here we don't want update emp id (as it's generated and can wrong when we allow to edit) and so, we will not that field in request object.
                  * We will do validate for input request employee name, address etc is null or empty.
-                 * we will do validate that input values is equal with database response.
+                 * if it's null or empty, we will not update for that field (eg. name) and so we will check with ! (not) operator and if not equal null, or etc. we will do process.
+                 * we will also do validate for input values is equal with database response.
                  * if same with database response value, we don't need to update that.
-                 * So, we will do with ! (not) operator. If not same(equal) or not empty, we will do update.
+                 * So, we will do with ! (not) operator when checking with db value. If not same(equal) or not empty, we will do update. if same, we will not update for that field (eg. name).
                  */
 
                 if (requestEmployee.getEmpName() != null && !requestEmployee.getEmpName().trim().equals("") &&
@@ -293,21 +293,25 @@ public class EmployeeService {
                 }
 
                 // validate at least one data was changed or not,
-                // if count = 0, we will assume that there is no data was change and so, no need to be update (save).
+                // if count = 0, we can assume that there is no data was change and so, no need to be update (save).
                 // because count value will be 1 if only one field was changed as per above if conditions.
                 if(count == 1) {
                     dbResponseEmployee.setUpdatedDate(new Date()); // update updatedDate
+                    // update dbResponseEmployee object and update field value will be in that object and rest value is same with existing.
                     dbResponseEmployee = employeeRepository.save(dbResponseEmployee);
 
                     logger.info("Successfully updated into db: {}", dbResponseEmployee);
 
                     /**
-                     * we can call below method too instead of above save method and below method is with @Query annotation.
+                     * we can call below method instead of above save method and below method is with @Query annotation.
+                     * if you use below code instead of above code, please comment above save method line and remove /* and / in below.
                      */
 
-//                    int a = employeeRepository.updateEmployee(dbResponseEmployee.getId(), dbResponseEmployee.getEmpName(),
-//                            dbResponseEmployee.getEmpAddress(), dbResponseEmployee.getEmpPrimaryPhone(),
-//                            dbResponseEmployee.getEmpSecondaryPhone(), dbResponseEmployee.getEmpEmail());
+                    /*
+                    int a = employeeRepository.updateEmployee(dbResponseEmployee.getId(), dbResponseEmployee.getEmpName(),
+                            dbResponseEmployee.getEmpAddress(), dbResponseEmployee.getEmpPrimaryPhone(),
+                            dbResponseEmployee.getEmpSecondaryPhone(), dbResponseEmployee.getEmpEmail());
+                    */
 
                     return new ResponseEntity("Successfully updated employee information. Please try to check by calling all employee information or employee by name or employee id", HttpStatus.OK);
 
