@@ -51,7 +51,7 @@
 
 <a name="about-the-project"></a>
 ## ⚡️ About The Project
-This is the sample backend microservice project for Employee Management System which developed with Spring Boot + Spring Data JPA + PostgreSQL.
+This is the sample backend microservice project for Employee Management System which developed with Spring Boot + Spring Data JPA + MySQL.
 You can learn Spring boot CRUD with sample employee management system.
 
 
@@ -60,7 +60,7 @@ You can learn Spring boot CRUD with sample employee management system.
 This project is built with
 * [Java](https://www.oracle.com/au/java/technologies/javase/javase-jdk8-downloads.html)
 * [Maven](https://maven.apache.org/download.cgi)
-* [Postgresql Database](https://www.postgresql.org/download/)
+* [MySQL Database](https://dev.mysql.com/downloads/installer/)
 
 
 <a name="getting-started"></a>
@@ -96,15 +96,18 @@ Prerequisites can be found in here [Spring Boot Application Instruction](https:/
 
 <a name="instruction"></a>
 ### 📝 Instruction
+* Create database with name as per your `application.properties` config name which follow by db url connection string by typing `create database {name};` by using database GUI tools or inside your database control.
 * Change your database username and password in `application.properties`.
 * Run the project in your IDE. Please make sure application was successfully running.
-* You can check in your database is that there has 'Role and User' table were auto created or not, under postgres schema by database GUI tools like ***DBeaver***.
+* You can check in your database is that there has 'Role and User' table were auto created or not, under employee_crud database by database GUI tools like ***DBeaver***.
 * Insert some data into 'Role' table in your database by querying in database console.
 * Find 'Role' table under postgres schema which will auto create by running application. 
-* If you can't find, just click refresh and see again under postgres schema.
-* You can add by clicking '+' sign in your 'Role' table ***or*** you can run below query in DBeaver console (please go Execute SQL Statement in your DBeaver) like
+* If you can't find, just click refresh and see again under your database.
+* You can add by clicking '+' sign in your 'Role' table ***or*** you can run below query in DBeaver console (please go Execute SQL Statement in your DBeaver)
+* If you use datagrip, you can add by clicking '+' sign in your 'Role' table ***or*** you can click `jump to query console` tab which is under `Database Explorer` tab, and you can type like below  
   ```sh 
-  insert into role (id, role_name) values (1, 'admin'); insert into role (id, role_name) values (2, 'normal user');
+  insert into role (id, role_name) values (1, 'admin'); 
+  insert into role (id, role_name) values (2, 'normal user');
 
 * Import `employee-crud-sample-postman-api-request.json` file under project directory (see that file in project directory) into your installed Postman application.
     * Click in your Postman (top left corner) import -> file -> upload files -> {choose that json file} and open/import.

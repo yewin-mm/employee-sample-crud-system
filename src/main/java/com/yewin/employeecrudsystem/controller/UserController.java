@@ -65,17 +65,16 @@ public class UserController {
     }
 
 
-
     @PostMapping("/changeRole")
     public ResponseEntity changeRole(@RequestParam int roleId, @RequestParam String userName) {
         logger.info("==================== Start change role method!!! ====================");
         logger.info("Request - roleId: {}, userName: {}", roleId, userName);
         ResponseEntity responseEntity;
-        try{
+        try {
 
-           responseEntity = userService.changeRole(roleId, userName);
+            responseEntity = userService.changeRole(roleId, userName);
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             logger.error(e.getMessage());
             responseEntity = new ResponseEntity("Something went wrong, Please contact to your administrator!!!!", HttpStatus.INTERNAL_SERVER_ERROR);

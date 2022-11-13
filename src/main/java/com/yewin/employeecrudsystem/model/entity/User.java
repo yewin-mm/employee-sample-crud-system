@@ -12,7 +12,8 @@ import java.util.Date;
  */
 
 @Entity
-@Table(name = "users") // we need to name with users not user because postgresql own table with name user. So we need to avoid conflict table name.
+@Table(name = "users")
+// we need to name with users not user because some db like postgresql own table with name user. So we need to avoid conflict table name.
 @Data
 public class User {
     @Id
@@ -23,7 +24,7 @@ public class User {
     private String userName;
     @Column(name = "password")
     private String password;
-    @Column(name="role_id")
+    @Column(name = "role_id")
     private long roleId;
     @Column(name = "is_deleted")
     private boolean isDeleted;

@@ -35,11 +35,11 @@ public class UserService {
 
     public ResponseEntity logInUserNameAndPassword(String userName, String password) {
 
-        if(userName == null || userName.trim().equals("")){
+        if (userName == null || userName.trim().equals("")) {
             return new ResponseEntity("Input User Name is null or empty, Please type valid User Name", HttpStatus.BAD_REQUEST);
         }
 
-        if(password == null || password.trim().equals("")){
+        if (password == null || password.trim().equals("")) {
             return new ResponseEntity("Input password is null or empty, Please type valid password", HttpStatus.BAD_REQUEST);
         }
 
@@ -62,7 +62,7 @@ public class UserService {
         }
 
         // there shouldn't be 2 user and which both name and password are same in database. So, we will return error message.
-        if(userList.size() > 1){
+        if (userList.size() > 1) {
             return new ResponseEntity("Something went wrong. Please contact to your administrator!!!", HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
@@ -72,7 +72,8 @@ public class UserService {
 
         // to get role name, we need to retrieve from role table as per role Id.
         Optional<Role> optionalRole = roleRepository.findById(roleId);
-        if(!optionalRole.isPresent()){ // check !(not) optional is existed or not.
+        if (!optionalRole.isPresent()) { // check !(not) optional is existed or not.
+            logger.warn("Role is not present, Please insert some role. Please read `instruction` section in ReadMe file.");
             return new ResponseEntity("Something went wrong. Please contact to your administrator!!!", HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
@@ -98,27 +99,27 @@ public class UserService {
     public ResponseEntity changePassword(String userName, String oldPassword, String newPassword, String confirmNewPassword) {
 
         // check user name is null or empty.
-        if(userName == null || userName.trim().equals("")){
+        if (userName == null || userName.trim().equals("")) {
             return new ResponseEntity("Input User Name is null or empty, Please type valid User Name.", HttpStatus.BAD_REQUEST);
         }
 
         // check old password is null or empty
-        if(oldPassword == null || oldPassword.trim().equals("")){
+        if (oldPassword == null || oldPassword.trim().equals("")) {
             return new ResponseEntity("Old Password is null or empty", HttpStatus.BAD_REQUEST);
         }
 
         // check old password is equal with new password or not
-        if(oldPassword.equals(newPassword)){
+        if (oldPassword.equals(newPassword)) {
             return new ResponseEntity("Old Password can't be same with New Password", HttpStatus.BAD_REQUEST);
         }
 
         // check new password is null or empty
-        if(newPassword == null || newPassword.trim().equals("")){
+        if (newPassword == null || newPassword.trim().equals("")) {
             return new ResponseEntity("New Password is null or empty", HttpStatus.BAD_REQUEST);
         }
 
         // check for new password is not equal with confirm password case
-        if(!newPassword.equals(confirmNewPassword)){
+        if (!newPassword.equals(confirmNewPassword)) {
             return new ResponseEntity("Confirm Password is not same with New Password", HttpStatus.BAD_REQUEST);
         }
 
@@ -136,12 +137,12 @@ public class UserService {
          */
 
         // check for response list is empty or not.
-        if(userList.isEmpty()){
-            String errMsg = "Couldn't find User with by input UserName: " +userName;
+        if (userList.isEmpty()) {
+            String errMsg = "Couldn't find User with by input UserName: " + userName;
             return new ResponseEntity(errMsg, HttpStatus.BAD_REQUEST);
         }
         // check for employee id is duplicate. It shouldn't be duplicate and so, we will return error.
-        if(userList.size() > 1){
+        if (userList.size() > 1) {
             return new ResponseEntity("Something went wrong. Please contact to your administrator!!!!", HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
@@ -154,8 +155,8 @@ public class UserService {
          * here if you insert password with Encryption in insert api (not insert as plain text in that api),
          * you need to decrypt back the database existingPassword before checking with input old password.
          * Because user will type plain text as input.
-          */
-        if(!oldPassword.equals(existingPassword)) {
+         */
+        if (!oldPassword.equals(existingPassword)) {
             return new ResponseEntity("Input old password is wrong!!!", HttpStatus.BAD_REQUEST);
         }
 
@@ -177,7 +178,7 @@ public class UserService {
     public ResponseEntity changeRole(int roleId, String userName) {
 
         // check user name is null or empty.
-        if(userName == null || userName.trim().equals("")){
+        if (userName == null || userName.trim().equals("")) {
             return new ResponseEntity("Input User Name is null or empty, Please type valid User Name.", HttpStatus.BAD_REQUEST);
         }
 
@@ -194,26 +195,26 @@ public class UserService {
          */
 
         // check for response list is empty or not.
-        if(userList.isEmpty()){
-            String errMsg = "Couldn't find User with by input User Name: " +userName;
+        if (userList.isEmpty()) {
+            String errMsg = "Couldn't find User with by input User Name: " + userName;
             return new ResponseEntity(errMsg, HttpStatus.BAD_REQUEST);
         }
         // check for employee id is duplicate. It shouldn't be duplicate and so, we will return error.
-        if(userList.size() > 1){
+        if (userList.size() > 1) {
             return new ResponseEntity("Something went wrong. Please contact to your administrator!!!!", HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
         // now user List has only one value and we will get it by get(0)
         User user = userList.get(0);
 
-        if(roleId == user.getRoleId()) {
+        if (roleId == user.getRoleId()) {
             return new ResponseEntity("Input role Id is same with existing database role Id.", HttpStatus.BAD_REQUEST);
         }
 
 
         user.setRoleId(roleId); // update role id into user object which object will save into db.
         user.setUpdatedDate(new Date()); // update updatedDate
-        user =  userRepository.save(user);
+        user = userRepository.save(user);
         logger.info("Successfully updated user role: {}", user);
 
         /**

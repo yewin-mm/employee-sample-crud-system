@@ -20,7 +20,7 @@ import java.util.List;
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
 
-    @Query(nativeQuery = true, value = "select COUNT (id )from employees ")
+    @Query(nativeQuery = true, value = "select COUNT(id )from employees")
     int getEmpId();
 
     /**
@@ -29,10 +29,12 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
      */
     List<Employee> findByIsDeletedOrderById(boolean isDelete); // we can use like -> List<Employee> findByIsDeleted(boolean isDelete); // but here we will return results as order by to arrange output as ascending.
 
-    @Query(nativeQuery = true, value = "select * from employees where id=:id and is_deleted=:isDelete") // no need to order by in here because it will return only one result.
+    @Query(nativeQuery = true, value = "select * from employees where id=:id and is_deleted=:isDelete")
+        // no need to order by in here because it will return only one result.
     Employee findEmployeeById(@Param("id") Long id, @Param("isDelete") boolean del);
 
-    @Query(nativeQuery = true, value = "select * from employees where emp_id=:empId and is_deleted=:isDelete") // no need to order by in here because it will return only one result, if not so, we will throw error in service class.
+    @Query(nativeQuery = true, value = "select * from employees where emp_id=:empId and is_deleted=:isDelete")
+        // no need to order by in here because it will return only one result, if not so, we will throw error in service class.
     List<Employee> findEmployeeByEmpId(@Param("empId") String empId, @Param("isDelete") boolean del);
 
     // here we will find name by 'like' query to get match all name by single text and add order by to arrange output as ascending.
