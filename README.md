@@ -32,7 +32,7 @@
 </h1>
 
 # employee-sample-crud-system
-* This is the sample backend microservice project for Employee Management System by using spring boot and spring data jpa.
+* This is the sample backend microservice project for Employee Management System by using Spring boot + Spring data jpa + MySQL. 
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -177,6 +177,3 @@ Contributions are what make the open source community such an amazing place to b
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push -u origin feature/yourname`)
 5. Open a Pull Request
-
-
-
