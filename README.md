@@ -45,6 +45,7 @@
     - [Instruction](#instruction)
 - [Business Logic](#business-logic)
 - [System Goal](#system-goal)
+- [Becoming a Sponsor](#becoming-a-sponsor)
 - [Contact Me](#contact)
 - [Contributing](#contributing)
 
@@ -58,7 +59,7 @@ You can learn Spring boot CRUD with sample employee management system.
 <a name="built-with"></a>
 ### 🪓 Built With
 This project is built with
-* [Java](https://www.oracle.com/au/java/technologies/javase/javase-jdk8-downloads.html)
+* [Java](https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html)
 * [Maven](https://maven.apache.org/download.cgi)
 * [MySQL Database](https://dev.mysql.com/downloads/installer/)
 
@@ -162,10 +163,17 @@ The goal of this system is to manage employee for a company and it will easy to 
 
 
 <a name="contact"></a>
-## ✉️ Contact
-Name - Ye Win <br> LinkedIn profile -  [Ye Win's LinkedIn](https://www.linkedin.com/in/ye-win-1a33a292/)  <br> Email Address - yewin.mmr@gmail.com
+## ✉️ Contact Me
+Name - Ye Win <br> LinkedIn profile -  [Ye Win](https://www.linkedin.com/in/ye-win-1a33a292/)  <br> Email Address - <a href="mailto:yewin.mmr@gmail.com?">yewin.mmr@gmail.com</a> <br> WhatsApp - [+959252656065](https://wa.me/959252656065?text=Hi) <br> Website - [My Website](https://yewin.me/)
 
 Project Link: [Spring Boot Employee Sample CRUD System](https://github.com/yewin-mm/employee-sample-crud-system)
+
+<a name="becoming-a-sponsor"></a>
+## 🥰 Becoming a Sponsor
+If you like any of my projects or if you want to support my work, please kindly consider becoming a sponsor. <br>
+It gives me great motivation and I can relentlessly maintain my projects and contribute to the open-source community.
+
+<a href="https://www.buymeacoffee.com/yewin" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="150" ></a>
 
 
 <a name="contributing"></a>
