@@ -45,8 +45,8 @@
     - [Instruction](#instruction)
 - [Business Logic](#business-logic)
 - [System Goal](#system-goal)
-- [Becoming a Sponsor](#becoming-a-sponsor)
 - [Contact Me](#contact)
+- [Becoming a Sponsor](#becoming-a-sponsor)
 - [Contributing](#contributing)
 
 
